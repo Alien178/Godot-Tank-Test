@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Tanks/tank_model_4/tank_model_4_2_b.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tanks/tank_model_4/tank_model_4_2_w1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tanks/tank_bullet.png" type="Texture" id=3]
+
+[node name="TankBody" type="Node2D"]
+
+[node name="Body" type="Sprite" parent="."]
+position = Vector2( 0, -66 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Left" type="Position2D" parent="."]
+position = Vector2( -24, -104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Right" type="Position2D" parent="."]
+position = Vector2( 24, -104 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Gobal" type="Position2D" parent="."]
+position = Vector2( -24, -104 )
+
+[node name="Barrel" type="Sprite" parent="Gobal"]
+texture = ExtResource( 2 )
+offset = Vector2( -48, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Shoot" type="Position2D" parent="Gobal"]
+position = Vector2( -96, 0 )
+
+[node name="Sprite" type="Sprite" parent="Gobal/Shoot"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="Gobal"]
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 3 )
